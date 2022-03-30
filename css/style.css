@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+#wrap {
+    width: 100%;
+}
+.menu-wrap {
+    background: palegoldenrod;
+    width: 10%;
+    height: 100vh;
+    position: absolute;
+}
+#contents-wrap {
+    width: 90%;
+    /* flex-basis: 0; */
+    position: absolute;
+    left: 10%;
+}
+.content-01-img {
+    background-size: cover;
+    display: inline-block;
+}
+.content-01-img img, .content-02-first img  {  /*사진 사이즈좀 줄여두자*/
+    width: 300px;
+}
+
+/* .mainIMG-01 {
+    background-image: url(../image/chairs-g69f433774_1920.jpg);
+} */
+
+.icon-circle {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+.icon-circle::before, .icon-circle::after {
+    content: "";
+    position: absolute;
+}
+
+.icon-circle::before {
+    width: 450px;
+    border: 1px solid black;
+    top: 25px;
+}
