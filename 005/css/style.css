@@ -19,18 +19,28 @@ li, ol, ul {
 }
 /********* GNB *********/
 .menu-wrap {
-    background: palegoldenrod;
-    width: 15%;
+    background: #2C2C2C;
+    width: 20%;
     height: 100vh;
     position: fixed;
 }
 .mainTitle {
     margin: 20%;
     text-align: center;
+    color: white;
+    font-size: 25px;
 }
 .menu-wrap .menu ul li {
     text-align: center;
     padding-bottom: 7%;
+    color: rgb(133, 133, 133);
+    transition: 0.01s;
+}
+.menu-wrap .menu ul li:hover {
+    color: white;
+}
+.menu-wrap .menu ul a:hover{
+    border-bottom: 1px solid #FFC300;
 }
 .menu-wrap .footer {
     width: 100%;
@@ -39,30 +49,33 @@ li, ol, ul {
     right: 0;
     left: 0;
     text-align: center;
+    background-color: aquamarine;
 }
 
-
-/********** 컨텐츠 **********/
+/************** 컨텐츠 시작 **************/
 #contents-wrap {
-    width: 85%;
-    /* flex-basis: 0; */
-    /* position: absolute; */
-    /* left: 15%; */
-
+    width: 80%;
     float: right;
     transition: 0.5s;
 }
-.content-01-img {
-    background-size: cover;
-    display: inline-block;
+
+/******* 슬라이드 이미지 *******/
+.content-01 {
+    height: 541px;
 }
-.content-01-img img, .content-02-first img  {  /*사진 사이즈좀 줄여두자*/
-    width: 300px;
+.content-01-img li .bg01{
+    background-image: url(../image/blog03.jpg);
+    width: 100%;
+    float: left;
+    position: relative;
+    display: inlin-block;
+}
+.content-02-first {  /*사진 사이즈좀 줄여두자*/
+    width: 100%;
+    background-image: url(../image/blog02.jpg);
+    height: 600px;
 }
 
-/* .mainIMG-01 {
-    background-image: url(../image/chairs-g69f433774_1920.jpg);
-} */
 
 .icon-circle {
     border: 1px solid black;
