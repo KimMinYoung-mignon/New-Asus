@@ -7,12 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/d1254e556e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script rel="stylesheet" href="./js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div id="wrap">
         <!-------------- GNB ---------------->
         <div class="menu-wrap">
-            <button>더보기</button>
+            <a href="#" class="ham">
+                <i></i>
+            </a>
             <h1 class="mainTitle"><a href="#">Min-young</a></h1>
             <div class="menu">
                 <ul>
@@ -36,13 +41,15 @@
         <div id="contents-wrap">
             <!-------------- 메인 이미지 ---------------->
             <div class="content-01">
-                <div class="content-01-img">
+                <div class="content-01-img" id="slideshow">
                     <ul class="slides">
-                        <li class="main-bg bg01"></li>
-                        <li class="main-bg bg02"></li>
-                        <li class="main-bg bg03"></li>
+                        <li class="slideIMG bg01"></li>
+                        <li class="slideIMG bg02"></li>
+                        <li class="slideIMG bg03"></li>
                     </ul>
                 </div>
+                <span class="prev">이전</span>
+                <span class="next">다음</span>
                 <div class="content-01-txtBox-wrap">
                     <div class="content-01-txtBox-cover">
                         <h3>An Inspiring Built Space</h3>
@@ -147,25 +154,25 @@
 
             <!-------------- 숫자 올라가는 컨텐츠 ---------------->
             <div class="content-04">
-                <img src="./image/content5-bg.jpg" alt="">
+                <img src="./image/content5-bg.jpg" alt="" style="width: 300px;">
                 <div class="content-04-wrap">
                     <ul>
-                        <li><img src="./image/cont4-01.png" alt=""></li>
+                        <li><img src="./image/cont4-01.png" alt="" style="width: 300px;"></li>
                         <li>3653</li>
                         <li>EMPLOYEES</li>
                     </ul>
                     <ul>
-                        <li><img src="./image/cont4-02.png" alt=""></li>
+                        <li><img src="./image/cont4-02.png" alt="" style="width: 300px;"></li>
                         <li>1539</li>
                         <li>PROJECT</li>
                     </ul>
                     <ul>
-                        <li><img src="./image/cont4-03.png" alt=""></li>
+                        <li><img src="./image/cont4-03.png" alt="" style="width: 300px;"></li>
                         <li>5987</li>
                         <li>CONSTRUTOR</li>
                     </ul>
                     <ul>
-                        <li><img src="./image/cont4-04.png" alt=""></li>
+                        <li><img src="./image/cont4-04.png" alt="" style="width: 300px;"></li>
                         <li>3999</li>
                         <li>PARTNERS</li>
                     </ul>
@@ -180,7 +187,7 @@
                     <span class="underBar"></span>
                 </div>
                 <div class="col-01">
-                    <img src="./image/recent001.jpg" alt="">
+                    <img src="./image/recent001.jpg" alt="" style="width: 300px;">
                     <div class="content-05-hover">
                         <div class="content-05-Txt">
                             <p class="recent-title">WORK 01</p>
@@ -194,7 +201,7 @@
                     </div>
                 </div>
                 <div class="col-02">
-                    <img src="./image/recent002.jpg" alt="">
+                    <img src="./image/recent002.jpg" alt="" style="width: 300px;">
                     <div class="content-05-hover">
                         <div class="content-05-Txt">
                             <p class="recent-title">WORK 02</p>
@@ -208,7 +215,7 @@
                     </div>
                 </div>
                 <div class="col-03">
-                    <img src="./image/recent003.jpg" alt="">
+                    <img src="./image/recent003.jpg" alt="" style="width: 300px;">
                     <div class="content-05-hover">
                         <div class="content-05-Txt">
                             <p class="recent-title">WORK 03</p>
@@ -222,7 +229,7 @@
                     </div>
                 </div>
                 <div class="col-04">
-                    <img src="./image/recent004.jpg" alt="">
+                    <img src="./image/recent004.jpg" alt="" style="width: 300px;">
                     <div class="content-05-hover">
                         <div class="content-05-Txt">
                             <p class="recent-title">WORK 04</p>
@@ -236,7 +243,7 @@
                     </div>
                 </div>
                 <div class="col-05">
-                    <img src="./image/recent005.jpg" alt="">
+                    <img src="./image/recent005.jpg" alt="" style="width: 300px;">
                     <div class="content-05-hover">
                         <div class="content-05-Txt">
                             <p class="recent-title">WORK 05</p>
@@ -250,7 +257,7 @@
                     </div>
                 </div>
                 <div class="col-06">
-                    <img src="./image/recent006.jpg" alt="">
+                    <img src="./image/recent006.jpg" alt="" style="width: 300px;">
                     <div class="content-05-hover">
                         <div class="content-05-Txt">
                             <p class="recent-title">WORK 06</p>
@@ -273,7 +280,7 @@
                     <span class="underBar"></span>
                 </div>
                 <div class="con-05-col-01">
-                    <img src="./image/blog01.jpg" alt="">
+                    <img src="./image/blog01.jpg" alt="" style="width: 300px;">
                     <ul>
                         <li>APRIL 14, 2018 | WEB DESIGN | 4</li>
                         <li>RENOVATING NATIONAL GALLERY</li>
@@ -281,7 +288,7 @@
                     </ul>
                 </div>
                 <div class="con-05-col-02">
-                    <img src="./image/blog02.jpg" alt="">
+                    <img src="./image/blog02.jpg" alt="" style="width: 300px;">
                     <ul>
                         <li>APRIL 14, 2018 | WEB DESIGN | 4</li>
                         <li>WORDPRESS FOR A BEGINNER</li>
@@ -289,7 +296,7 @@
                     </ul>
                 </div>
                 <div class="con-05-col-03">
-                    <img src="./image/blog03.jpg" alt="">
+                    <img src="./image/blog03.jpg" alt="" style="width: 300px;">
                     <ul>
                         <li>APRIL 14, 2018 | WEB DESIGN | 4</li>
                         <li>MAKE WEBSITE FROM SCRATCH</li>
@@ -308,5 +315,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+   
+        document.querySelector('.prev').click(function(){
+            document.querySelector('.slides').style.transform='translate(-100vh)'
+        })
+    </script>
 </body>
 </html>
