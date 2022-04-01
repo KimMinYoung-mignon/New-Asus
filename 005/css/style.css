@@ -15,13 +15,13 @@ li, ol, ul {
     list-style: none;
 }
 #wrap {
-    width: 100%;
+    max-width: 100%;
 }
 /********* GNB *********/
 .menu-wrap {
     background: #2C2C2C;
     width: 20%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
 }
 .mainTitle {
@@ -29,6 +29,10 @@ li, ol, ul {
     text-align: center;
     color: white;
     font-size: 25px;
+}
+.menu ul {
+    text-align: center;
+    background-color: beige;
 }
 .menu-wrap .menu ul li {
     text-align: center;
@@ -52,6 +56,35 @@ li, ol, ul {
     background-color: aquamarine;
 }
 
+/* 햄버거 버튼 before, after 쓰기 */
+.ham {
+    width: 24px;
+    height: 4px;
+    position: fixed;
+    cursor: pointer;
+
+    z-index: 9999;
+    opacity: 1;
+    padding: 20px;
+}
+.ham i {
+    display: inline-block;
+    position: relative;
+
+    width: 20px;
+    height: 2px;
+    color: rgb(255, 255, 255);
+}
+.ham::before, .ham::after {
+    content: "";
+    position: absolute;
+}
+.ham::before {
+    width: 20px;
+    height: 2px;
+    color: rgb(255, 255, 255);
+}
+
 /************** 컨텐츠 시작 **************/
 #contents-wrap {
     width: 80%;
@@ -59,17 +92,43 @@ li, ol, ul {
     transition: 0.5s;
 }
 
-/******* 슬라이드 이미지 *******/
-.content-01 {
-    height: 541px;
-}
-.content-01-img li .bg01{
-    background-image: url(../image/blog03.jpg);
-    width: 100%;
+/******* 슬라이드 이미지 시작 *******/
+.content-01 .content-01-img .slides li {
     float: left;
     position: relative;
-    display: inlin-block;
+    width: 100%;
+    height: 100vh;
 }
+.content-01 .content-01-img .slides .bg01{
+    background: url(../image/mainbg001.jpg) no-repeat center/cover;
+}
+.content-01 .content-01-img .slides .bg02{
+    background: url(../image/mainbg003.jpg) no-repeat center/cover;
+}
+.content-01 .content-01-img .slides .bg03{
+    background: url(../image/mainbg002.jpg) no-repeat center/cover;
+}
+
+/* 슬라이드쇼 설정*/
+#slideshow {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+}
+.slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+
+
+
+
+
 .content-02-first {  /*사진 사이즈좀 줄여두자*/
     width: 100%;
     background-image: url(../image/blog02.jpg);
@@ -97,4 +156,17 @@ li, ol, ul {
 }
 .content-04-pic img {
     width: 150px;
+}
+
+/* 미디어 쿼리 */
+
+
+@media screen and (max-width: 768px) {
+    .menu-wrap {
+        transform: translateX(-20%);
+        transition: 0.5s;
+    }
+    #contents-wrap {
+        width: 100%;
+    }
 }
