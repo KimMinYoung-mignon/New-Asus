@@ -41,12 +41,20 @@
         <div id="contents-wrap">
             <!-------------- 메인 이미지 ---------------->
             <div class="content-01">
-                <div class="content-01-img" id="slideshow">
-                    <ul class="slides">
-                        <li class="slideIMG bg01"></li>
-                        <li class="slideIMG bg02"></li>
-                        <li class="slideIMG bg03"></li>
-                    </ul>
+                <div class="main">
+                    <div class="content-01-img slide" id="slideshow">
+                        <!-- <ul class="slides">
+                            <li class="slideIMG bg01"></li>
+                            <li class="slideIMG bg02"></li>
+                            <li class="slideIMG bg03"></li>
+                        </ul> -->
+
+                        <div><img class="slideIMG" src="./image/mainbg001.jpg" alt=""></div>
+                        <div><img class="slideIMG" src="./image/mainbg002.jpg" alt=""></div>
+                        <div><img class="slideIMG" src="./image/mainbg003.jpg" alt=""></div>
+
+
+                    </div>
                 </div>
                 <span class="prev">이전</span>
                 <span class="next">다음</span>
@@ -318,9 +326,16 @@
 
     <script>
    
-        document.querySelector('.prev').click(function(){
-            document.querySelector('.slides').style.transform='translate(-100vh)'
-        })
+    $('.slide > div:gt(0)').hide();
+
+    setInterval(function(){
+        $('.slide > div:first')
+            .fadeOut(1500)
+            .next()
+            .fadeIn(1500)
+            .end()
+            .appendTo('.slide');
+    },3000);
     </script>
 </body>
 </html>
