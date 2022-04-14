@@ -491,22 +491,66 @@ li.font-ssmall {
 }
 .cont-06--wrap {
     width: 100%;
-    background-color: rebeccapurple;
     display: table;
 }
-.con-05-col {
-    display: table-cell;
+
+.cont-06--wrapAll {
     width: 33.33333%;
+    display: table-cell;
 }
-.con-05-col > img {
-    width: 200px;
+.con-06-col > img {
+    width: 100%;
+}
+.cont06-cont {
+    padding: 0 20px;
+}
+.cont06-txt > ul {
+    padding: 20px 0;
+}
+.xsmallFont {
+    font-size: var(--small-title);
+    color: rgba(0, 0, 0, 0.4) !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+li.cont06-mainFont {
+    padding: 30px 0;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+li.cont06-exFont {
+    line-height: 1.6;
+    color: #a3a3a3;
 }
 
 
 
+/******* 컨텍미 *******/
+.content-07 {
+    background-color: #fafafa;
+    padding: 3.3em 0;
+}
+.content-07-wrap {
+    display: inline-block;
+}
 
-
-
+.content-07-wrap {
+    padding: 0 2em;
+    display: inline-block;
+}
+.content-07-wrap > p {
+    padding: 1.5em 0;
+}
+.content-07-wrap > a {
+    width: 160px;
+    background-color: #FFC300;
+    display: block;
+    border-radius: 41px;
+    padding: 1.3em;
+    text-align: center;
+    color: white;
+}
 /* 미디어 쿼리 */
 @media screen and (min-width:1024px){
     /* 데스크탑 */
@@ -538,4 +582,3 @@ li.font-ssmall {
         display: inline;
     }
 }
-
